@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABHINAV GUPTA | Modern Animated Portfolio</title>
+    <meta name="description" content="Animated & Highly Responsive Neo-Brutalist Portfolio of Abhinav Gupta, SDE & Full Stack Developer.">
+    
+    <!-- Google Fonts: Bangers, Comic Neue, & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,700&family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome & Animate.css & AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Interactive Anti-Gravity Physics Canvas -->
+    <canvas id="antigravity-canvas"></canvas>
+
+    <!-- Custom Cursor Dots (Desktop) -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Comic Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top comic-navbar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <span class="brand-badge animate-pulse">⚡</span>
+                <span class="navbar-brand-text">ABHINAV.DEV</span>
+            </a>
+            <button class="navbar-toggler comic-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <div class="navbar-nav ms-auto d-flex flex-wrap gap-2 pt-3 pt-lg-0">
+                    <a class="nav-pill" href="#about">ABOUT</a>
+                    <a class="nav-pill" href="#education">EDUCATION</a>
+                    <a class="nav-pill" href="#skills">SKILLS</a>
+                    <a class="nav-pill" href="#projects">PROJECTS</a>
+                    <a class="nav-pill contact-pill" href="#contact">CONTACT ✉</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="comic-speech-bubble hero-tag mb-3 animate-float">
+                        ✦ Available for Internships & JOBS 🚀
+                    </div>
+                    <h1 class="hero-name">ABHINAV GUPTA</h1>
+                    <h2 class="hero-role">
+                        Software <span class="typing-container"><span id="typing-text">Developer()</span><span class="typing-cursor">|</span></span>
+                    </h2>
+                    <p class="hero-desc">
+                        Final year B.Tech student passionate about building cool, interactive web applications. I love clean code, dynamic pop UIs, and turning ambitious ideas into real products.
+                    </p>
+                    
+                    <!-- Stats Counter Row -->
+                    <div class="hero-stats-row my-4 d-flex flex-wrap gap-3">
+                        <div class="stat-box">
+                            <span class="stat-num" data-target="100">0</span>+
+                            <span class="stat-label">LeetCode Solved</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num" data-target="10">0</span>+
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num" data-target="8">0</span>.2
+                            <span class="stat-label">B.Tech CGPA</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="#projects" class="btn-brutalist btn-yellow btn-animated">
+                            View Projects ↓
+                        </a>
+                        <a href="https://github.com/abhinavgupta" target="_blank" rel="noreferrer" class="btn-brutalist btn-outline btn-animated">
+                            GitHub Profile ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="avatar-card text-center tilt-card">
+                        <div class="avatar-container">
+                            <div class="avatar-circle">
+                                <img src="profile.jpg" alt="Abhinav Gupta" class="avatar-img">
+                            </div>
+                            <div class="status-badge animate-pulse">● Open to Work</div>
+                        </div>
+                        <h3 class="avatar-name">Abhinav Gupta</h3>
+                        <p class="avatar-sub">SDE Aspirant & MERN Dev</p>
+                        
+                        <div class="mt-3 text-start info-tags-grid">
+                            <div class="info-tag">
+                                <span class="tag-label">[LOCATION]</span>
+                                <span class="tag-val">Noida, India</span>
+                            </div>
+                            <div class="info-tag">
+                                <span class="tag-label">[STATUS]</span>
+                                <span class="tag-val">Final Year B.Tech</span>
+                            </div>
+                            <div class="info-tag">
+                                <span class="tag-label">[STACK]</span>
+                                <span class="tag-val">MERN Stack & DSA</span>
+                            </div>
+                        </div>
+
+                        <div class="social-row mt-3">
+                            <a href="https://github.com/abhinavgupta" target="_blank" class="social-btn">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/abhinav-gupta-052860239/" target="_blank" class="social-btn">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="mailto:abhinavsonaili@gmail.com" class="social-btn">
+                                <i class="fa-solid fa-envelope"></i> Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title title-cyan" data-aos="fade-right">
+                ABOUT ME <span class="title-bg"></span>
+            </h2>
+            <div class="row g-4 mt-2">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-card tilt-card">
+                        <p>
+                            Hey! I'm a <span class="highlight-text">final year B.Tech student</span>, Aspiring Software Development Engineer (SDE) with hands-on experience in full-stack web development using React.js, JavaScript (ES6+), HTML5, CSS3, and Bootstrap.
+                        </p>
+                        <p>
+                            Proficient in Data Structures & Algorithms with <strong>100+ problems solved on LeetCode</strong>. Built and deployed 3+ real-world production projects including an e-commerce platform and task management system. Experienced in RESTful API integration, component-based architecture, and Agile workflows.
+                        </p>
+                        <p>
+                            I've worked on projects involving <span class="badge-inline">real-time apps</span>, <span class="badge-inline">REST APIs</span>, and <span class="badge-inline">responsive web design</span>. I love the challenge of turning a blank screen into something people actually enjoy using.
+                        </p>
+                        <p class="mb-0">
+                            When I'm not coding, I'm exploring new tech, contributing to open source, or sketching out my next project idea.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
+                    <div class="about-card quick-facts-card h-100 tilt-card">
+                        <h3 class="card-subtitle mb-3">⚡ QUICK FACTS</h3>
+                        <ul class="fact-list">
+                            <li><i class="fa-solid fa-graduation-cap"></i> <strong>Degree:</strong> B.Tech CSE (2023–2027)</li>
+                            <li><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Noida, India</li>
+                            <li><i class="fa-solid fa-briefcase"></i> <strong>Status:</strong> Open to Internships & Jobs</li>
+                            <li><i class="fa-solid fa-code"></i> <strong>Projects:</strong> 10+ Projects Built</li>
+                            <li><i class="fa-solid fa-headset"></i> <strong>Vibe:</strong> Fuelled by music & code 🎧</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section section-dark" id="education">
+        <div class="container">
+            <h2 class="section-title title-yellow text-center mx-auto" data-aos="zoom-in">
+                EDUCATION <span class="title-bg"></span>
+            </h2>
+            <div class="row justify-content-center g-4 mt-3">
+                <div class="col-lg-10">
+                    <div class="edu-timeline">
+                        
+                        <!-- Edu 1 -->
+                        <div class="edu-card tilt-card" data-aos="fade-right" data-aos-delay="100">
+                            <div class="edu-header">
+                                <span class="edu-year">2023 – 2027</span>
+                                <span class="badge-status">In Progress</span>
+                            </div>
+                            <h3 class="edu-degree">B.Tech in Computer Science & Engineering</h3>
+                            <h4 class="edu-school">Mangalmay Institute of Engineering & Technology, Greater Noida</h4>
+                            <p class="edu-details">CGPA: 8.2/10 · Relevant coursework: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks, Full Stack Web Development.</p>
+                        </div>
+
+                        <!-- Edu 2 -->
+                        <div class="edu-card tilt-card" data-aos="fade-right" data-aos-delay="200">
+                            <div class="edu-header">
+                                <span class="edu-year">2022</span>
+                                <span class="badge-status">Completed</span>
+                            </div>
+                            <h3 class="edu-degree">Class XII (PCM)</h3>
+                            <h4 class="edu-school">RNDB Senior Secondary School</h4>
+                            <p class="edu-details">Percentage: 81% · Major Subjects: Physics, Chemistry, Mathematics & Computer Science.</p>
+                        </div>
+
+                        <!-- Edu 3 -->
+                        <div class="edu-card tilt-card" data-aos="fade-right" data-aos-delay="300">
+                            <div class="edu-header">
+                                <span class="edu-year">2020</span>
+                                <span class="badge-status">Completed</span>
+                            </div>
+                            <h3 class="edu-degree">Class X</h3>
+                            <h4 class="edu-school">RNDB Senior Secondary School</h4>
+                            <p class="edu-details">Percentage: 82% · High academic distinction with top score in Mathematics.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title title-pink" data-aos="fade-right">
+                SKILLS <span class="title-bg"></span>
+            </h2>
+            <div class="row g-4 mt-2">
+                <!-- Frontend -->
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="skill-group-card tilt-card">
+                        <div class="group-header group-frontend">
+                            <i class="fa-solid fa-laptop-code"></i> Frontend
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-badge s-cyan">React.js</span>
+                            <span class="skill-badge s-yellow">JavaScript (ES6+)</span>
+                            <span class="skill-badge s-orange">HTML5</span>
+                            <span class="skill-badge s-purple">CSS3</span>
+                            <span class="skill-badge s-purple">Bootstrap 5</span>
+                            <span class="skill-badge s-cyan">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="skill-group-card tilt-card">
+                        <div class="group-header group-backend">
+                            <i class="fa-solid fa-server"></i> Backend & DB
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-badge s-green">Node.js</span>
+                            <span class="skill-badge s-green">Express.js</span>
+                            <span class="skill-badge s-green">MongoDB</span>
+                            <span class="skill-badge s-cyan">SQL / MySQL</span>
+                            <span class="skill-badge s-yellow">REST APIs</span>
+                            <span class="skill-badge s-orange">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="skill-group-card tilt-card">
+                        <div class="group-header group-tools">
+                            <i class="fa-solid fa-toolbox"></i> Tools & Core
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-badge s-pink">Git & GitHub</span>
+                            <span class="skill-badge s-purple">Data Structures (DSA)</span>
+                            <span class="skill-badge s-cyan">VS Code</span>
+                            <span class="skill-badge s-orange">Postman API</span>
+                            <span class="skill-badge s-pink">Figma</span>
+                            <span class="skill-badge s-yellow">Vercel / Netlify</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-dark" id="projects">
+        <div class="container">
+            <h2 class="section-title title-orange" data-aos="fade-right">
+                PROJECTS <span class="title-bg"></span>
+            </h2>
+            <div class="row g-4 mt-2">
+                
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="project-card tilt-card">
+                        <div class="project-card-header">
+                            <span class="project-num">#01</span>
+                            <div class="project-links">
+                                <a href="https://github.com/02shivakant" target="_blank" class="project-link-btn btn-gh">GH ↗</a>
+                                <a href="https://shop-verse-e-commerce.vercel.app/" target="_blank" class="project-link-btn btn-live">LIVE ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">ShopVerse E-Commerce</h3>
+                            <p class="project-desc">
+                                A full-stack shopping platform with cart management, user authentication, catalog filtering, and Razorpay payment integration built using React and Node.js.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag tag-react">React</span>
+                                <span class="tech-tag tag-node">Node.js</span>
+                                <span class="tech-tag tag-express">Express</span>
+                                <span class="tech-tag tag-mongo">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="project-card tilt-card">
+                        <div class="project-card-header">
+                            <span class="project-num">#02</span>
+                            <div class="project-links">
+                                <a href="https://github.com/02shivakant" target="_blank" class="project-link-btn btn-gh">GH ↗</a>
+                                <a href="https://the-product-works-in-assignment-r4k.vercel.app/" target="_blank" class="project-link-btn btn-live">LIVE ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Developer Productivity MVP</h3>
+                            <p class="project-desc">
+                                Developer workflow and assignment management tool featuring real-time state synchronization, task tracking, and smooth interactive UI components.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag tag-react">React.js</span>
+                                <span class="tech-tag tag-bs">Bootstrap</span>
+                                <span class="tech-tag tag-css">CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="project-card tilt-card">
+                        <div class="project-card-header">
+                            <span class="project-num">#03</span>
+                            <div class="project-links">
+                                <a href="https://github.com/02shivakant" target="_blank" class="project-link-btn btn-gh">GH ↗</a>
+                                <a href="https://kanban-task-board-w38w.vercel.app/" target="_blank" class="project-link-btn btn-live">LIVE ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Kanban Task Board</h3>
+                            <p class="project-desc">
+                                A drag-and-drop Kanban board to manage tasks efficiently. Features priority badges, task columns, local storage persistence, and deadline alerts.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag tag-react">React</span>
+                                <span class="tech-tag tag-js">JavaScript</span>
+                                <span class="tech-tag tag-css">CSS Modules</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title title-yellow" data-aos="fade-right">
+                GET IN TOUCH <span class="title-bg"></span>
+            </h2>
+            <div class="row g-4 mt-2">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-form-card tilt-card">
+                        <h3 class="contact-card-title">Send A Message 💬</h3>
+                        <p class="contact-card-sub">
+                            Got an opportunity, project idea, or just want to say hi? Drop a message!
+                        </p>
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                            <div class="mb-3">
+                                <label for="name" class="form-label-custom">Your Name</label>
+                                <input type="text" id="name" required class="form-control-custom" placeholder="Rahul Sharma">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label-custom">Email Address</label>
+                                <input type="email" id="email" required class="form-control-custom" placeholder="rahul@gmail.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label-custom">Message</label>
+                                <textarea id="message" rows="4" required class="form-control-custom" placeholder="Hey Abhinav! I'd like to connect regarding..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-brutalist btn-yellow w-100 mt-2 btn-animated" id="submit-btn">
+                                SEND MESSAGE ✉
+                            </button>
+                            <div id="form-feedback" class="mt-3 text-center d-none"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-info-card h-100 tilt-card">
+                        <h3 class="contact-card-title mb-4">OTHER WAYS TO REACH ME</h3>
+                        
+                        <div class="contact-info-item">
+                            <div class="info-icon icon-email animate-pulse"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <div class="info-label">Email Address</div>
+                                <a href="mailto:abhinavsonaili@gmail.com" class="info-value">abhinavsonaili@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="info-icon icon-linkedin animate-pulse"><i class="fa-brands fa-linkedin"></i></div>
+                            <div>
+                                <div class="info-label">LinkedIn</div>
+                                <a href="https://www.linkedin.com/in/abhinav-gupta-052860239/" target="_blank" class="info-value">abhinav-gupta-052860239</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="info-icon icon-github animate-pulse"><i class="fa-brands fa-github"></i></div>
+                            <div>
+                                <div class="info-label">GitHub</div>
+                                <a href="https://github.com/abhinavgupta" target="_blank" class="info-value">@abhinavgupta</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="info-icon icon-location animate-pulse"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <div class="info-label">Location</div>
+                                <span class="info-value">Noida, Uttar Pradesh, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-0">
+                Built with 🎵 music & 💻 code by <strong>Abhinav Gupta</strong>. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Vanilla Tilt, AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
